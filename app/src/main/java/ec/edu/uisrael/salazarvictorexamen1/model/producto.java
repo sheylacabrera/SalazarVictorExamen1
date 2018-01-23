@@ -8,50 +8,35 @@ import android.net.Uri;
 
 public class producto {
 
-    private int id;
-    private String name;
-    private Uri url;
-    private Integer idImagen;
+    private int idProducto;
+    private String nombre;
+    private Float pvp;
 
     public producto() {
     }
 
-    public producto(int id, String name, Integer idImagen) {
-        this.id = id;
-        this.name = name;
-        this.idImagen = idImagen;
+    public int getIdProducto() {
+        return idProducto;
     }
 
-    public Integer getIdImagen() {
-        return idImagen;
+    public void setIdProducto(int idProducto) {
+        this.idProducto = idProducto;
     }
 
-    public void setIdImagen(Integer idImagen) {
-        this.idImagen = idImagen;
+    public String getNombre() {
+        return nombre;
     }
 
-    public Uri getUrl() {
-        return url;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setUrl(Uri url) {
-        this.url = url;
+    public Float getPvp() {
+        return pvp;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setPvp(Float pvp) {
+        this.pvp = pvp;
     }
 }
 

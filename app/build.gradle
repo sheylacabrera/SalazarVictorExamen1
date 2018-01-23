@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "ec.edu.uisrael.salazarvictorexamen1"
         minSdkVersion 16
@@ -18,9 +18,13 @@ android {
         }
     }
 }
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases' }
+}
+
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -28,4 +32,6 @@ dependencies {
     compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    compile 'com.google.code.ksoap2-android:ksoap2-android:3.6.2'
 }

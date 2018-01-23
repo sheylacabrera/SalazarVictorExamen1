@@ -1,4 +1,4 @@
-package ec.edu.uisrael.salazarvictorexamen1;
+package ec.edu.uisrael.salazar.victor;
 
 import org.junit.Test;
 

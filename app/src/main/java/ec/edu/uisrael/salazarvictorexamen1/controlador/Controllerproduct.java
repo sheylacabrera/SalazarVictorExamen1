@@ -28,7 +28,7 @@ public class Controllerproduct {
     public boolean  addvehiculo(producto obj) throws Exception {
 
         if (datos.contains(obj)) return false;
-        obj.setId(datos.size()+ 1);
+        obj.setIdProducto(datos.size()+ 1);
         datos.add(obj);
         return true;
     }

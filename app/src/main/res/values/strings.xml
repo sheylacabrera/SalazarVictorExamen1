@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pastelería el  ESMERALDITA</string>
+    <string name="app_name">PEDIDOS</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Ingresar correo</string>
@@ -7,7 +7,7 @@
     <string name="action_sign_in">Iniciar sesión</string>
     <string name="action_sign_up">Registrarse</string>
     <string name="action_sign_in_short">Entrar</string>
-    <string name="error_invalid_email">La direccion de correo electronico no es valido</string>
+    <string name="error_invalid_email">usuario no es valido</string>
     <string name="error_invalid_password">La clave es muy corto</string>
     <string name="error_incorrect_password">Usuario o Clave incorrecta</string>
     <string name="error_field_required">Campo requerido</string>

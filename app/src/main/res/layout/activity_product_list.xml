@@ -12,6 +12,7 @@
             android:id="@+id/imageView2"
             android:layout_width="298dp"
             android:layout_height="136dp"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/logo"
             tools:layout_editor_absoluteX="50dp"
             tools:layout_editor_absoluteY="14dp" />
@@ -21,14 +22,26 @@
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:text="TextView"
-            android:textColor="@android:color/holo_orange_dark"
-             />
+            android:textColor="?android:attr/colorActivatedHighlight"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <ListView
             android:id="@+id/listView"
+            style="@android:style/Widget.ExpandableListView"
             android:layout_width="383dp"
-            android:layout_height="317dp"
+            android:layout_height="301dp"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="193dp" />
+
+        <Button
+            android:id="@+id/txtreturn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="onclickreturn"
+            android:text="Regresar" />
 
 </LinearLayout>
