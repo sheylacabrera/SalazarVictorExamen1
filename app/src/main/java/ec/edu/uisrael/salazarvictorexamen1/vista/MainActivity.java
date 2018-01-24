@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapPrimitive;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
@@ -24,8 +25,10 @@ import ec.edu.uisrael.salazarvictorexamen1.controlador.ControllerViews;
 import ec.edu.uisrael.salazarvictorexamen1.model.Usuario;
 
 public class MainActivity extends AppCompatActivity {
-    private static String NAMESPACE = "http://ws.docente.uisrael.edu.ec/";
-    private static String URL = "http://www.cuscungosoft.com:8080/docente-ws/LoginServices?wsdl";
+    private static String NAMESPACE = "http://ws.uisrael.edu.ec/";
+    //private static String NAMESPACE = "http://ws.docente.uisrael.edu.ec/";
+    //private static String URL = "http://www.cuscungosoft.com:8080/docente-ws/LoginServices?wsdl";
+    private static String URL = "http://130.1.26.176:8080/EjemploWS/ServiciosDemo?wsdl";
     private Usuario usuario;
     private String respuesta;
 
@@ -72,26 +75,26 @@ public class MainActivity extends AppCompatActivity {
 
     private void loginWS(String usr, String pwd) {
         String METHOD_NAME = "login";
-        String SOAP_ACTION = "loginAction";
+        String SOAP_ACTION = "loginaction";
         SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
-        request.addProperty("username", usr); //añade datos al servicio web
-        request.addProperty("password", pwd); //añade datos al servicio web
+        request.addProperty("usr", usr); //añade datos al servicio web
+        request.addProperty("pwd", pwd); //añade datos al servicio web
         SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapEnvelope.setOutputSoapObject(request);
         HttpTransportSE transporte = new HttpTransportSE(URL);
         try {
             transporte.call(SOAP_ACTION, soapEnvelope);
             //Se procesa el resultado devuelto
-            SoapObject response = (SoapObject) soapEnvelope.getResponse();
+            SoapPrimitive response = (SoapPrimitive) soapEnvelope.getResponse();
 
             //response = (SoapObject) response.getProperty("Servicos");
             //response = (SoapObject) response.getProperty("cServico");
             usuario = new Usuario();
             usuario.setUsername(usr);
             usuario.setPassword(pwd);
-            usuario.setNombre(response.getPropertyAsString("nombre"));
-            int a = Integer.parseInt(response.getPropertyAsString("idUsuario"));
-            usuario.setCodigo(a);
+            //usuario.setNombre(response.getPropertyAsString("nombre"));
+            //int a = Integer.parseInt(response.getPropertyAsString("idUsuario"));
+            //usuario.setCodigo(a);
             respuesta = "OK";
         } catch (Exception e) {
             e.printStackTrace();

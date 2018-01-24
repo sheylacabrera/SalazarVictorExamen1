@@ -31,8 +31,10 @@ import ec.edu.uisrael.salazarvictorexamen1.model.producto;
 
 
 public class productList extends AppCompatActivity {
-    private static String NAMESPACE = "http://ws.docente.uisrael.edu.ec/";
-    private static String URL = "http://www.cuscungosoft.com:8080/docente-ws/ProductoServices?wsdl";
+    private static String NAMESPACE = "http://ws.uisrael.edu.ec/";
+    //private static String NAMESPACE = "http://ws.docente.uisrael.edu.ec/";
+    //private static String URL = "http://www.cuscungosoft.com:8080/docente-ws/ProductoServices?wsdl";
+    private static String URL = "http://130.1.26.176:8080/EjemploWS/ServiciosDemo?wsdl";
 
     private Controllerproduct adminProduct;
     private ListView lista;

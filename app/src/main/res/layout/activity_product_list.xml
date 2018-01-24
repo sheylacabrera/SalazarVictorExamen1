@@ -13,7 +13,7 @@
             android:layout_width="298dp"
             android:layout_height="136dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/logo"
+            app:srcCompat="@drawable/imagen1"
             tools:layout_editor_absoluteX="50dp"
             tools:layout_editor_absoluteY="14dp" />
 
