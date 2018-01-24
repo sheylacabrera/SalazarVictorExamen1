@@ -107,4 +107,10 @@ public class productList extends AppCompatActivity {
         Intent login = new Intent ( productList.this, MainActivity.class);
         startActivity(login);
     }
+
+    public void onclickcreate (View v) {
+        Intent createView = new Intent ( productList.this, ActivityCreate.class);
+        startActivity(createView);
+    }
+
 }

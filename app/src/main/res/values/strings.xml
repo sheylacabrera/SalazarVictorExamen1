@@ -14,4 +14,14 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="producto">Producto</string>
+    <string name="precio">pVp</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_update">Actualizar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="sms_save">Guardado correctamente</string>
+    <string name="sms_error_save">Error al intentar guardar :</string>
+    <string name="sms_error_nombre">El campo producto es un valor requerido </string>
+    <string name="sms_error_pvp">>El campo precio es un valor requerido</string>
+    <string name="sms_update">Actualizado correctamente</string>
 </resources>
